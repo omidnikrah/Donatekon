@@ -1,0 +1,18 @@
+<?php $__env->startSection('content'); ?>
+
+    <body class="index">
+    <div class="container padding_index">
+        <h3 class="titleh3">افزودن دسته بندی  </h3>
+        <form class="form_cat" method="post" action="<?php echo e(action('CategoryController@store')); ?>">
+            <input type="hidden" value="<?php echo e(csrf_token()); ?>" name="_token">
+            <?php if($errors->has()): ?>
+                <span><?php echo e($errors->first('title')); ?></span>
+            <?php endif; ?>
+            <input type="text" value="<?php echo e(old('title')); ?>" name="title" placeholder="عنوان دسته" >
+            <input type="submit" value="افزودن دسته">
+        </form>
+    </div>
+    </body>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'iransans';
+    src: url('../fonts/IranSans.eot?#') format('eot'), url('../fonts/IranSans.woff') format('woff'), url('../fonts/IranSans.svg') format('svg'), url('../fonts/IranSans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'calibri';
+    src: url('../fonts/Calibri.eot?#') format('eot'), url('../fonts/Calibri.woff') format('woff'), url('../fonts/Calibri.svg') format('svg'), url('../fonts/Calibri.ttf') format('truetype');
+}
+
+* {
+    border: 0;
+    outline: 0;
+    margin: 0 auto;
+    text-decoration: none;
+    direction: rtl;
+    font-family: "iransans", "calibri";
+}
+
+.bg_index {
+    background-attachment: fixed;
+    background-image: url("../img/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg_donate{
+    background-attachment: fixed;
+    background-image: url("../img/bg2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.col-centered {
+    float: none !important;
+    text-align: center;
+}
+
+#social_clash {
+    color: #fff;
+    font-size: 120px;
+    font-weight: 100;
+    text-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#social_clash span {
+    color: #ffaf25;
+}
+
+.padding_index {
+    padding: 20px 0;
+}
+
+#detail_social_clash {
+    font-size: 41px;
+    font-weight: 100;
+    text-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+#detail_social_clash span {
+    background-color: #ffaf25;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+#clash_room {
+    color: #fff;
+    font-size: 33px;
+    text-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.7;
+}
+
+.clash_room {
+    margin-top: 50px;
+}
+
+.price {
+    color: #e82121;
+    font-size: 38px;
+}
+
+.price:hover {
+    color: #e82121;
+    font-size: 38px;
+    text-decoration: none
+}
+
+.now {
+    background-color: #2ca25e !important;
+    transition: all 400ms ease-in-out;
+}
+
+.now:hover {
+    background-color: #2ca25e;
+}
+
+.see {
+    background-color: #00bff3 !important;
+    transition: all 400ms ease-in-out;
+}
+
+.see:hover {
+    background-color: #00bff3;
+}
+
+.btns {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btns:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btns:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.boxbtn {
+    margin-top: 50px;
+}
+.index{
+    text-align: center;
+    background-color: #85657f;
+}
+.titleh3 {
+    color: #fff;
+    font-size: 35px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+.add {
+    background-color: #e45353;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    margin: 20px 0 !important;
+    padding: 5px 10px;
+}
+.add:hover , .add:focus{
+    color: #fff;
+    text-decoration: none;
+}
+.form_cat {
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    display: inline-block;
+    margin: 30px 0;
+    padding: 10px;
+}
+.form_cat input {
+    border-radius: 3px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.form_cat input[type="submit"] {
+    background-color: #2ca25e;
+    color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+.listbox li {
+    background-color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    list-style: outside none none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.listbox {
+    float: none !important;
+    margin-top: 30px;
+}
+.listbox > li > span {
+    float: right;
+}
+.listbox > li > a {
+     float: left;
+ }
+.listbox > li > a {
+    color: #2ca25e;
+}
+.sss{
+    margin-right: 15px;
+    color: #f33434 !important;
+    background-color: transparent;
+    float: left;
+
+}
+.listbox > li > a:nth-child(2) {
+    margin-right: 15px;
+    color: #f33434 !important;
+}
+.listbox > li > a , .listbox > li > a:focus , .listbox > li > a:hover{
+    text-decoration: none;
+}
+.successup {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px;
+}
+.myheader {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    list-style: outside none none;
+    padding: 10px;
+}
+.myheader a,.myheader a:focus,.myheader a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+#fastexit {
+    background-color: #e83e3e;
+    border-radius: 6%;
+    display: inline-block;
+    padding: 10px;
+}
+#smile {
+    color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+#formDonate {
+    margin-top: 50px;float: none;
+}
+#formDonate input {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#formDonate input[type="submit"] {
+    background-color: #399a6b;
+    color: #fff;
+}
+#formDonate select {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.between {
+    color: #fff;
+    display: block;
+    float: right;
+    margin: 5px 0 10px;
+}
+.errors {
+    background-color: #ea3838;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+.listbox li > span:nth-child(3) {
+    float: left;
+}
+.listbox li > span:nth-child(1) {
+    margin-left: 10px;
+}

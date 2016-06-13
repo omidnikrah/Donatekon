@@ -1,0 +1,19 @@
+<?php $__env->startSection('content'); ?>
+
+    <body class="index">
+    <div class="container padding_index">
+        <h3 class="titleh3">ویرایش دسته "<?php echo e($category->title); ?>" </h3>
+        <form class="form_cat" method="post" action="<?php echo e(action('CategoryController@update' , $category->id)); ?>">
+            <input type="hidden" name="_method" value="PATCH">
+            <input type="hidden" value="<?php echo e(csrf_token()); ?>" name="_token">
+            <?php if($errors->has()): ?>
+                <span><?php echo e($errors->first('title')); ?></span>
+            <?php endif; ?>
+            <input type="text" value="<?php echo e($category->title); ?>" name="title" placeholder="عنوان دسته" >
+            <input type="submit" value="ویرایش دسته">
+        </form>
+    </div>
+    </body>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

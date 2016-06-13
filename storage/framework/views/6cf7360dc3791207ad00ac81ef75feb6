@@ -1,0 +1,43 @@
+<?php $__env->startSection('content'); ?>
+
+    <body class="index">
+    <header class="myheader"><?php if(Auth::guest()): ?>
+            <li><a href="<?php echo e(url('/auth/login')); ?>">Login</a></li>
+            <li><a href="<?php echo e(url('/auth/register')); ?>">Register</a></li>
+        <?php else: ?>
+
+                سلام
+                <span><?php echo e(Auth::user()->name); ?></span>
+                عزیز خوش آمدید
+
+                    <a href="<?php echo e(url('/auth/logout')); ?>" id="fastexit">خروج سریع</a>
+
+        <?php endif; ?></header>
+        <div class="container padding_index">
+            <h3 class="titleh3">دسته بندی ها</h3>
+            <?php if(Session::has('success')): ?>
+                <span class="successup"><?php echo e(Session::get('success')); ?></span>
+            <?php endif; ?>
+            <ul class="listbox col-md-7">
+
+                <?php foreach($cat as $cats): ?>
+
+                <li>
+                    <span><?php echo e($cats->title); ?></span>
+                    <form method="post" action="<?php echo e(action('CategoryController@destroy' , $cats->id)); ?>">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                        <input class="sss" type="submit"value="حذف">
+
+                    </form>
+                    <a href="<?php echo e(action('CategoryController@edit' , $cats->id)); ?>">ویرایش</a>
+                </li>
+
+            <?php endforeach; ?>
+            </ul>
+            <a href="<?php echo e(action('CategoryController@create')); ?>" class="add">افزودن دسته جدید</a>
+        </div>
+    </body>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

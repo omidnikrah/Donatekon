@@ -1,0 +1,36 @@
+<?php $__env->startSection('content'); ?>
+
+    <body class="bg_donate">
+    <div class="container padding_index">
+        <h1 id="smile">خیلی خوشحالم که میخوای دونیت کنی</h1>
+        <form method="post" action="<?php echo e(action('DonateController@payment')); ?>" id="formDonate" class="col-md-6">
+            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+            <?php if($errors->has()): ?>
+                <span class="errors"><?php echo e($errors->first('name')); ?></span>
+            <?php endif; ?>
+            <input type="text" name="name" value="<?php echo e(old('name')); ?>" placeholder="اسم و فامیلت؟">
+            <?php if($errors->has()): ?>
+                <span class="errors"><?php echo e($errors->first('email')); ?></span>
+            <?php endif; ?>
+            <input type="email" name="email" value="<?php echo e(old('email')); ?>" placeholder="ایمیلت؟">
+            <?php if($errors->has()): ?>
+                <span class="errors"><?php echo e($errors->first('price')); ?></span>
+            <?php endif; ?>
+            <input type="text" name="price" value="<?php echo e(old('price')); ?>" placeholder="چقدر میخوای دونیت کنی؟">
+            <span class="between">با پول چیکار کنم؟</span>
+            <?php if($errors->has()): ?>
+                <span class="errors"><?php echo e($errors->first('price')); ?></span>
+            <?php endif; ?>
+            <select name="category">
+                <?php foreach($cat as $cats => $id): ?>
+                    <option value=" <?php echo e($id); ?>"><?php echo e($id); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <input type="submit" value="تموم">
+        </form>
+    </div>
+    </body>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

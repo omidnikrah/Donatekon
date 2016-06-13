@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo e($title); ?></title>
+    <link href="<?php echo e(asset('css/style.css')); ?>" type="text/css" rel="stylesheet">
+    <link href="<?php echo e(asset('css/bootstrap.min.css')); ?>" type="text/css" rel="stylesheet">
+    <link href="<?php echo e(asset('css/font-awesome.min.css')); ?>" type="text/css" rel="stylesheet">
+    <script src="<?php echo e(asset('js/jquery-1.9.1.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('js/bootstrap.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('js/scroll.js')); ?>" type="text/javascript"></script>
+
+</head>
+
+<?php echo $__env->yieldContent('content'); ?>
+
+</html>
