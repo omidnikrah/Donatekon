@@ -4,5 +4,6 @@
 
 
  Simple Donation system with laravel framework
+** It's for Fun :) 
 
 ![HomePage DonateKon](https://raw.githubusercontent.com/omidnikrah/Donatekon/master/Donatekon.png)
